@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nepal Trends - Trending Today</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  
 </head>
 <body>
   <!-- Header -->
@@ -53,30 +53,30 @@
   <footer id="contact">
     <p>&copy; 2026 Nepal Trends. All rights reserved.</p>
   </footer>
-</body>
-</html>body { background:#0d0d0d; color:#fff; font-family:Arial, sans-serif; margin:0; }
-header { display:flex; justify-content:space-between; padding:20px 50px; background:#111; position:sticky; top:0;}
+  <style>
+body { background:#0d0d0d; color:#fff; font-family:Arial; margin:0; }
+
+header { display:flex; justify-content:space-between; padding:20px 50px; background:#111; position:sticky; top:0; }
 header .logo { color:#ff5733; font-weight:bold; font-size:24px; }
-header nav ul { display:flex; list-style:none;}
-header nav ul li { margin-left:20px;}
-header nav ul li a { color:#fff; text-decoration:none;}
+
+header nav ul { display:flex; list-style:none; }
+header nav ul li { margin-left:20px; }
+header nav ul li a { color:#fff; text-decoration:none; }
 header nav ul li a:hover { color:#33ff57; }
 
 .hero { text-align:center; padding:100px 20px; }
 .hero h1 { color:#ff5733; margin-bottom:20px; }
 .hero p { color:#ccc; margin-bottom:30px; }
-.hero .cta { text-decoration:none; background:#33ff57; color:#0d0d0d; padding:15px 30px; border-radius:30px;}
-.hero .cta:hover { background:#ff5733; color:#fff; }
 
 .trending { text-align:center; padding:80px 50px; }
-.trending .items { display:flex; flex-wrap:wrap; justify-content:center; gap:30px;}
-.trending .item { background:#1a1a1a; padding:20px; border-radius:15px; width:250px; opacity:0; transform:translateY(50px);}
-.trending .item img { width:100%; border-radius:10px; margin-bottom:15px;}
-.trending .item h3 { color:#ff5733; margin-bottom:10px; }
-.trending .item p { color:#ccc; }
+.trending .items { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+.trending .item { background:#1a1a1a; padding:20px; border-radius:15px; width:250px; opacity:0; transform:translateY(50px); transition:0.6s; }
 
-footer { background:#111; padding:30px; text-align:center; color:#fff; }// Scroll animation
+footer { background:#111; padding:30px; text-align:center; color:#777; }
+</style>
+<script>
 const items = document.querySelectorAll('.trending .item');
+
 window.addEventListener('scroll', () => {
   const trigger = window.innerHeight + window.scrollY;
   items.forEach(item => {
@@ -86,3 +86,6 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+</script>
+</body>
+</html>
