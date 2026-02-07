@@ -59,6 +59,43 @@ body { background:#0d0d0d; color:#fff; font-family:Arial; margin:0; }
 header { display:flex; justify-content:space-between; padding:20px 50px; background:#111; position:sticky; top:0; }
 header .logo { color:#ff5733; font-weight:bold; font-size:24px; }
 
+   /* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .trending .items {
+    flex-direction: column;
+  }
+
+  .trending .item {
+    width: 100%;
+  }
+} 
 header nav ul { display:flex; list-style:none; }
 header nav ul li { margin-left:20px; }
 header nav ul li a { color:#fff; text-decoration:none; }
